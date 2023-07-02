@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="gamesPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" styleClass="root" stylesheets="@main_styling.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.gamesByPlatformController">
+   <children>
+      <BorderPane layoutX="7.0" prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox prefHeight="25.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="168.0" prefWidth="10.0" />
+                  <VBox alignment="CENTER" prefHeight="111.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="166.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/logo2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="131.0" prefWidth="30.0" />
+                  <VBox alignment="CENTER" prefHeight="131.0" prefWidth="366.0">
+                     <children>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="141.0" prefWidth="366.0">
+                           <children>
+                              <TextField fx:id="gameSearch" onAction="#searchGame" prefHeight="32.0" prefWidth="366.0" promptText="Press Enter to search any game" styleClass="text-field" stylesheets="@main_styling.css">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Text fx:id="gamePlatform" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="PC Games" wrappingWidth="291.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                              <MenuButton mnemonicParsing="false" text="Sort by:">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#sortByRating" text="Ratings" />
+                                  <MenuItem mnemonicParsing="false" onAction="#sortByPublicationYear" text="Release Date" />
+                                    <MenuItem mnemonicParsing="false" onAction="#alphabetical" text="Alphabetical" />
+                                </items>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </MenuButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="131.0" prefWidth="30.0" />
+                  <VBox alignment="CENTER" prefHeight="122.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="backToPlatforms" alignment="CENTER" mnemonicParsing="false" onAction="#backButton" prefHeight="41.0" prefWidth="92.0" text="Back" textAlignment="CENTER">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/back.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="131.0" prefWidth="23.0" />
+                  <VBox alignment="CENTER" prefHeight="131.0" prefWidth="147.0">
+                     <children>
+                        <Button fx:id="profileButton" alignment="CENTER" mnemonicParsing="false" onAction="#goToMyProfile" prefHeight="41.0" prefWidth="139.0" text="Profile" textAlignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/profile.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </graphic></Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="131.0" prefWidth="2.0" />
+                  <VBox alignment="CENTER" prefHeight="131.0" prefWidth="125.0">
+                     <children>
+                        <Button fx:id="goBackToLogin" alignment="CENTER" mnemonicParsing="false" onAction="#goBackToLogin" text="Logout">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                     </children>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="19.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <left>
+            <VBox prefHeight="618.0" prefWidth="206.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="26.0" prefWidth="206.0" />
+                  <Button mnemonicParsing="false" onAction="#checkFilter" prefHeight="25.0" prefWidth="142.0" text="Filter">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets left="35.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="595.0" prefWidth="176.0">
+                     <content>
+                        <VBox fx:id="filterBox" alignment="CENTER" prefHeight="618.0" prefWidth="222.0">
+                           <children>
+                              <Text fx:id="genres" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Genres" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                              <VBox fx:id="genreBox" alignment="CENTER_LEFT" prefHeight="238.0" prefWidth="187.0">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="322.0" prefWidth="222.0">
+                                 <children>
+                                    <VBox alignment="BOTTOM_CENTER" prefHeight="0.0" prefWidth="222.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Age" textAlignment="CENTER">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                    <CheckBox fx:id="pegi3" mnemonicParsing="false" text="Until 6 years old">
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </CheckBox>
+                                    <CheckBox fx:id="pegi7" mnemonicParsing="false" text="7-11 years old">
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </CheckBox>
+                                    <CheckBox fx:id="pegi12" mnemonicParsing="false" prefHeight="17.0" prefWidth="114.0" text="12-15 years old">
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </CheckBox>
+                                    <CheckBox fx:id="pegi16" mnemonicParsing="false" prefHeight="17.0" prefWidth="114.0" text="16-17 years old">
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </CheckBox>
+                                    <CheckBox fx:id="pegi18" mnemonicParsing="false" prefHeight="17.0" prefWidth="114.0" text="18+ years old">
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </CheckBox>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="142.0" prefWidth="222.0">
+                                 <children>
+                                    <VBox alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="222.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Release Year">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                    <CheckBox fx:id="before2000" mnemonicParsing="false" prefHeight="17.0" prefWidth="114.0" text="Before 2000" textAlignment="CENTER">
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox fx:id="before2005" mnemonicParsing="false" prefHeight="17.0" prefWidth="114.0" text="2000-2005">
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox fx:id="before2010" mnemonicParsing="false" prefHeight="17.0" prefWidth="114.0" text="2006-2010">
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox fx:id="before2015" mnemonicParsing="false" prefHeight="17.0" prefWidth="114.0" text="2011-2015">
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox fx:id="before2020" mnemonicParsing="false" prefHeight="17.0" prefWidth="114.0" text="2016-2020">
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                 </children>
+                              </VBox>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Creators">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                              <VBox fx:id="creatorsBox" alignment="CENTER_LEFT" prefHeight="148.0" prefWidth="222.0">
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Bandai Namco">
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Activision-Blizzard" textAlignment="CENTER">
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Bethesda">
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="BioWare">
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Blizzard">
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Bungie Inc">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Capcom">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Electronic Arts">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Epic Games">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Game Freak">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Gameloft">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Infinity Ward">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Gameloft">
+                                       <padding>
+                                          <Insets left="25.0" top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Insomniac Games">
+                                       <padding>
+                                          <Insets left="25.0" top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Microsoft">
+                                       <padding>
+                                          <Insets left="25.0" top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Mojang">
+                                       <padding>
+                                          <Insets left="25.0" top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Naughty Dog">
+                                       <padding>
+                                          <Insets left="25.0" top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="NCSOFT">
+                                       <padding>
+                                          <Insets left="25.0" top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Nintendo">
+                                       <padding>
+                                          <Insets left="25.0" top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Polyphony Digital">
+                                       <padding>
+                                          <Insets left="25.0" top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Popcap">
+                                       <padding>
+                                          <Insets left="25.0" top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Riot Games">
+                                       <padding>
+                                          <Insets left="25.0" top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Rockstar Games">
+                                       <padding>
+                                          <Insets left="25.0" top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Sega Games">
+                                       <padding>
+                                          <Insets left="25.0" top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Sony">
+                                       <padding>
+                                          <Insets left="25.0" top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Square Enix">
+                                       <padding>
+                                          <Insets left="25.0" top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Take-Two Interactive">
+                                       <padding>
+                                          <Insets left="25.0" top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Ubisoft">
+                                       <padding>
+                                          <Insets left="25.0" top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Valve">
+                                       <padding>
+                                          <Insets left="25.0" top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="ZeniMax Media">
+                                       <padding>
+                                          <Insets left="25.0" top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="200.0" text="Zynga">
+                                       <padding>
+                                          <Insets left="25.0" top="5.0" />
+                                       </padding>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <HBox BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="16.0" top="22.0" />
+               </BorderPane.margin>
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="596.0" prefWidth="802.0">
+                     <content>
+                        <GridPane fx:id="grid" prefHeight="594.0" prefWidth="804.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </HBox>
+         </center></BorderPane>
+   </children>
+</AnchorPane>

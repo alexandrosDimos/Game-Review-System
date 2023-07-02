@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="546.0" maxWidth="756.0" minHeight="546.0" minWidth="756.0" prefHeight="546.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RegisterController">
+    <left>
+        <AnchorPane prefHeight="407.0" prefWidth="228.0" BorderPane.alignment="CENTER">
+            <children>
+            <ImageView fitHeight="565.0" fitWidth="313.0" layoutX="-1.0">
+               <image>
+                  <Image url="@images/login_gamers_area.jpg" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="481.0" prefWidth="440.0" BorderPane.alignment="CENTER">
+            <children>
+            <ImageView fitHeight="567.0" fitWidth="459.0" layoutX="-2.0" layoutY="-3.0">
+               <image>
+                  <Image url="@images/login_grey_background.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="209.0" fitWidth="278.0" layoutX="72.0" layoutY="29.0">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+                <Label layoutX="107.0" layoutY="270.0" text="Username" textFill="WHITE" />
+                <TextField fx:id="SetUsername" layoutX="172.0" layoutY="265.0" prefHeight="26.0" prefWidth="173.0" promptText="Username" />
+            <Label layoutX="127.0" layoutY="305.0" text="E-mail" textFill="WHITE" />
+            <TextField fx:id="SetEmail" layoutX="172.0" layoutY="300.0" prefHeight="26.0" prefWidth="173.0" promptText="E-mail" />
+                <Label layoutX="111.0" layoutY="340.0" text="Password" textFill="WHITE" />
+                <PasswordField fx:id="SetPassword" layoutX="172.0" layoutY="335.0" prefHeight="26.0" prefWidth="173.0" promptText="Password" />
+            <Label layoutX="61.0" layoutY="375.0" text="Re-enter Password" textFill="WHITE" />
+            <PasswordField fx:id="ConfirmPassword" layoutX="172.0" layoutY="370.0" prefHeight="26.0" prefWidth="173.0" promptText="Confirmation Password" />
+                <Button layoutX="104.0" layoutY="442.0" mnemonicParsing="false" onAction="#registerButtonActionEvent" prefHeight="25.0" prefWidth="242.0" text="Register" />
+                <Label layoutX="140.0" layoutY="479.0" prefHeight="17.0" text="Already a member? Login" textFill="WHITE" />
+                <Label fx:id="messageLabel" alignment="CENTER" layoutX="79.0" layoutY="499.0" prefHeight="17.0" prefWidth="292.0" textFill="#e7e301" />
+            <Label layoutX="138.0" layoutY="410.0" text="Age" textFill="WHITE" />
+            <TextField fx:id="SetAge" layoutX="172.0" layoutY="405.0" prefHeight="26.0" prefWidth="173.0" promptText="Your age" />
+            <Button fx:id="cancelButton" layoutX="211.0" layoutY="525.0" mnemonicParsing="false" onAction="#exitButtonAction" text="Exit" />
+            <Hyperlink fx:id="backToLogIn" layoutX="276.0" layoutY="476.0" onAction="#logInButtonAction" text="here" textFill="#f2ff00" />
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>

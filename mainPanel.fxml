@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="platformsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" styleClass="root" stylesheets="@main_styling.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainPanelController">
+   <children>
+      <BorderPane layoutX="7.0" prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox prefHeight="25.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="168.0" prefWidth="10.0" />
+                  <VBox alignment="CENTER" prefHeight="111.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="166.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/logo2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="122.0" prefWidth="100.0" />
+                  <VBox alignment="CENTER" prefHeight="168.0" prefWidth="364.0">
+                     <children>
+                        <TextField fx:id="gameSearch" onAction="#searchGame" prefHeight="32.0" prefWidth="276.0" promptText="Press Enter to search any game" styleClass="text-field" stylesheets="@main_styling.css">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="122.0" prefWidth="100.0" />
+                  <VBox alignment="CENTER" prefHeight="131.0" prefWidth="130.0">
+                     <children>
+                        <Button fx:id="profileButton" alignment="CENTER" mnemonicParsing="false" onAction="#goToMyProfile" prefHeight="41.0" prefWidth="127.0" text="Profile" textAlignment="CENTER">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/profile.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="117.0" prefWidth="30.0" />
+                  <VBox alignment="CENTER" prefHeight="131.0" prefWidth="125.0">
+                     <children>
+                        <Button fx:id="backToLogin" alignment="CENTER" mnemonicParsing="false" onAction="#goBackToLogin" text="Logout">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                     </children>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="19.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <left>
+            <VBox alignment="CENTER" prefHeight="612.0" prefWidth="226.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="612.0" prefWidth="264.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="110.0" prefWidth="226.0" />
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="165.0">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#findMeTopRatedGames" prefHeight="70.0" prefWidth="140.0" text="TOP RATED GAMES" textAlignment="CENTER" wrapText="true">
+                                 <graphic>
+                                    <ImageView fitHeight="64.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/top.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="165.0">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#findMeNewestGames" prefHeight="70.0" prefWidth="140.0" text="NEWEST GAMES" textAlignment="CENTER" wrapText="true">
+                                 <graphic>
+                                    <ImageView fitHeight="56.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/new.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="165.0">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#findMePopularGames" prefHeight="70.0" prefWidth="140.0" text="MOST POPULAR GAMES" textAlignment="CENTER" wrapText="true">
+                                 <graphic>
+                                    <ImageView fitHeight="56.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/most_popular.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="165.0">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#findMeUpcomingGames" prefHeight="70.0" prefWidth="140.0" text="UPCOMING GAMES" textAlignment="CENTER" wrapText="true">
+                                 <graphic>
+                                    <ImageView fitHeight="56.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/upcoming.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="34.0" prefWidth="146.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="582.0" prefWidth="798.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="27.0" prefWidth="798.0" />
+                  <HBox prefHeight="161.0" prefWidth="859.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="286.3">
+                           <children>
+                              <Button fx:id="pcGames" alignment="CENTER" mnemonicParsing="false" onAction="#findMePCGames" prefHeight="100.0" prefWidth="160.0" stylesheets="@main_styling.css" textAlignment="CENTER" wrapText="true">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <VBox alignment="CENTER" prefHeight="12.0" prefWidth="144.0">
+                                       <children>
+                                          <ImageView fitHeight="69.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/platforms/pc.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="286.3">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#findMePS5Games" prefHeight="100.0" prefWidth="160.0" stylesheets="@main_styling.css" textAlignment="CENTER" wrapText="true">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <VBox alignment="CENTER" prefHeight="12.0" prefWidth="144.0">
+                                       <children>
+                                          <ImageView fitHeight="92.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/platforms/ps5.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </graphic></Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="286.3">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#findMePS4Games" prefHeight="100.0" prefWidth="160.0" stylesheets="@main_styling.css" textAlignment="CENTER" wrapText="true">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <VBox alignment="CENTER" prefHeight="12.0" prefWidth="144.0">
+                                       <children>
+                                          <ImageView fitHeight="126.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/platforms/ps4.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="161.0" prefWidth="859.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="286.3">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#findMePS3Games" prefHeight="100.0" prefWidth="160.0" stylesheets="@main_styling.css" textAlignment="CENTER" wrapText="true">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <VBox alignment="CENTER" prefHeight="12.0" prefWidth="144.0">
+                                       <children>
+                                          <ImageView fitHeight="126.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/platforms/ps3.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="286.3">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#findMePSPGames" prefHeight="100.0" prefWidth="160.0" stylesheets="@main_styling.css" textAlignment="CENTER" wrapText="true">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <VBox alignment="CENTER" prefHeight="12.0" prefWidth="144.0">
+                                       <children>
+                                          <ImageView fitHeight="92.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/platforms/psp.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="286.3">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#findMePSVitaGames" prefHeight="100.0" prefWidth="160.0" stylesheets="@main_styling.css" textAlignment="CENTER" wrapText="true">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <VBox alignment="CENTER" prefHeight="12.0" prefWidth="144.0">
+                                       <children>
+                                          <ImageView fitHeight="92.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/platforms/psvita.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="161.0" prefWidth="859.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="286.3">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#findMeXboxXGames" prefHeight="100.0" prefWidth="160.0" stylesheets="@main_styling.css" textAlignment="CENTER" wrapText="true">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <VBox alignment="CENTER" prefHeight="136.0" prefWidth="224.0">
+                                       <children>
+                                          <ImageView fitHeight="79.0" fitWidth="143.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/platforms/seriesx.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="286.3">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#findXboxOneGames" prefHeight="100.0" prefWidth="160.0" stylesheets="@main_styling.css" textAlignment="CENTER" wrapText="true">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <VBox alignment="CENTER" prefHeight="12.0" prefWidth="144.0">
+                                       <children>
+                                          <ImageView fitHeight="70.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/platforms/xboxone.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="286.3">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#findXbox360Games" prefHeight="100.0" prefWidth="160.0" stylesheets="@main_styling.css" textAlignment="CENTER" wrapText="true">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <VBox alignment="CENTER" prefHeight="12.0" prefWidth="144.0">
+                                       <children>
+                                          <ImageView fitHeight="92.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/platforms/xbox360.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="161.0" prefWidth="859.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="286.3">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#findMeNSGames" prefHeight="100.0" prefWidth="160.0" stylesheets="@main_styling.css" textAlignment="CENTER" wrapText="true">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <VBox alignment="CENTER" prefHeight="136.0" prefWidth="224.0">
+                                       <children>
+                                          <ImageView fitHeight="43.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/platforms/switch.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="286.3">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#findMeWiiGames" prefHeight="100.0" prefWidth="160.0" stylesheets="@main_styling.css" textAlignment="CENTER" wrapText="true">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <VBox alignment="CENTER" prefHeight="12.0" prefWidth="144.0">
+                                       <children>
+                                          <ImageView fitHeight="92.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/platforms/wii.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="286.3">
+                           <children>
+                              <Button alignment="CENTER" mnemonicParsing="false" onAction="#findMeAndroidGames" prefHeight="100.0" prefWidth="160.0" stylesheets="@main_styling.css" textAlignment="CENTER" wrapText="true">
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <VBox alignment="CENTER" prefHeight="12.0" prefWidth="144.0">
+                                       <children>
+                                          <ImageView fitHeight="79.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/platforms/android.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center></BorderPane>
+   </children>
+</AnchorPane>

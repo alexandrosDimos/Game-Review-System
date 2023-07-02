@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GameInsert">
+   <children>
+      <ImageView fitHeight="698.0" fitWidth="841.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.25" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+         <image>
+            <Image url="@images/main_background.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="GameName" layoutX="131.0" layoutY="63.0" promptText="Game Name" />
+      <TextField fx:id="gamePublisher" layoutX="131.0" layoutY="102.0" promptText="Game Publisher" />
+      <TextField fx:id="devStudio" layoutX="131.0" layoutY="141.0" promptText="Development Studio" />
+      <TextField fx:id="pubYear" layoutX="131.0" layoutY="181.0" promptText="publication date" />
+      <TextField fx:id="Rating" layoutX="131.0" layoutY="223.0" promptText="Rating" />
+      <TextField fx:id="Age" layoutX="131.0" layoutY="304.0" promptText="Age Appropriation" />
+      <TextField fx:id="imagePath" layoutX="131.0" layoutY="345.0" onAction="#previewCoverImage" promptText="PathToImage" />
+      <Button layoutX="682.0" layoutY="255.0" mnemonicParsing="false" onAction="#insertButtonAction" prefHeight="25.0" prefWidth="64.0" text="Insert" />
+      <TextField fx:id="reviewNum" layoutX="131.0" layoutY="267.0" promptText="Number of reviews" />
+      <RadioButton fx:id="setSingleplayerOption" layoutX="131.0" layoutY="507.0" mnemonicParsing="false" text="Singleplayer" textFill="#d5e000" />
+      <RadioButton fx:id="setMultiplayerOption" layoutX="226.0" layoutY="507.0" mnemonicParsing="false" text="Multiplayer" textFill="#d5e000" />
+      <Label layoutX="72.0" layoutY="536.0" text="Platform" textFill="#d5e000" />
+      <RadioButton fx:id="pc" layoutX="130.0" layoutY="536.0" mnemonicParsing="false" text="PC" textFill="#d5e000" />
+      <RadioButton fx:id="ps4" layoutX="301.0" layoutY="536.0" mnemonicParsing="false" text="PS4" textFill="#d5e000" />
+      <RadioButton fx:id="ps3" layoutX="246.0" layoutY="536.0" mnemonicParsing="false" text="PS3" textFill="#d5e000" />
+      <RadioButton fx:id="ps5" layoutX="185.0" layoutY="536.0" mnemonicParsing="false" text="PS5" textFill="#d5e000" />
+      <RadioButton layoutX="354.0" layoutY="536.0" mnemonicParsing="false" text="XBOX-One" textFill="#d5e000" fx:id="xboxOne" />
+      <RadioButton layoutX="439.0" layoutY="536.0" mnemonicParsing="false" text="XBOX-360" textFill="#d5e000" fx:id="xbox360" />
+      <RadioButton layoutX="525.0" layoutY="536.0" mnemonicParsing="false" text="XBOX-X" textFill="#d5e000" fx:id="xboxX" />
+      <RadioButton fx:id="nintendoSwitch" layoutX="596.0" layoutY="536.0" mnemonicParsing="false" text="Nintendo Switch" textFill="#d5e000" />
+      <Label alignment="TOP_LEFT" layoutX="130.0" layoutY="21.0" prefHeight="33.0" prefWidth="272.0" text="PLEASE INSERT GAME INFO" textFill="#d5e000" />
+      <RadioButton fx:id="wii" layoutX="131.0" layoutY="567.0" mnemonicParsing="false" text="Wii" textFill="#d5e000" />
+      <RadioButton fx:id="psp" layoutX="185.0" layoutY="567.0" mnemonicParsing="false" text="PSP" textFill="#d5e000" />
+      <RadioButton fx:id="psvita" layoutX="239.0" layoutY="567.0" mnemonicParsing="false" text="PSVita" textFill="#d5e000" />
+      <RadioButton fx:id="android" layoutX="301.0" layoutY="567.0" mnemonicParsing="false" text="Android" textFill="#d5e000" />
+      <TextField fx:id="genre1" layoutX="131.0" layoutY="455.0" promptText="Genre1" />
+      <TextField fx:id="genre2" layoutX="319.0" layoutY="454.0" promptText="Genre2" />
+      <TextField fx:id="genre3" layoutX="502.0" layoutY="454.0" promptText="Genre3" />
+      <ImageView fx:id="previewImage" fitHeight="203.0" fitWidth="261.0" layoutX="359.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="72.0" layoutY="459.0" text="Genres" textFill="#d5e000" />
+      <Label fx:id="setMessage" layoutX="682.0" layoutY="296.0" textFill="#d5e000" />
+      <TextField fx:id="getImagePath" layoutX="131.0" layoutY="392.0" onAction="#previewImage" prefHeight="25.0" prefWidth="177.0" promptText="Pick Images For This Game" />
+      <Button layoutX="525.0" layoutY="392.0" mnemonicParsing="false" onAction="#insertImageButtonAction" onMouseEntered="#enableLabel" onMouseExited="#disableLabel" text="Insert Image" />
+      <TextField fx:id="getTitle" layoutX="328.0" layoutY="392.0" promptText="Insert Image Title" />
+      <Button layoutX="683.0" layoutY="322.0" mnemonicParsing="false" onAction="#deleteButtonAction" onMouseEntered="#enableLabel" onMouseExited="#disableLabel" prefHeight="25.0" prefWidth="63.0" text="Delete" textFill="#fc0303" />
+      <Label fx:id="messageLabel" layoutX="620.0" layoutY="392.0" opacity="0.0" prefHeight="25.0" prefWidth="204.0" text="You only need the name of the game" textFill="#d5e000" />
+      <Button fx:id="backToLogin" layoutX="354.0" layoutY="593.0" mnemonicParsing="false" onAction="#goBackToLogin" prefHeight="25.0" prefWidth="109.0" text="Back to Login" />
+
+   </children>
+</AnchorPane>
